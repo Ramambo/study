@@ -1,0 +1,218 @@
+/* Global */
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-yellow: #fad05c;
+  
+    /* Font size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+  
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+  
+    /* Size */
+    --size-border-radius: 4px;
+  
+    /* Annimation */
+    --animation-duration: 300ms;
+  }
+  
+  /*Global Tag*/
+  body {
+    font-family: 'Yeon Sung', cursive;
+    margin: 0;
+    background-color: var(--color-light-white);
+    font-size: var(--font-regular);
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Main */
+  
+  .receipt_top {
+    display: block;
+    margin: auto;
+    width: 500px;
+  }
+  
+  .main {
+    margin: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+  }
+  
+  /* Title */
+  .title {
+    font-size: var(--font-large);
+    padding: 10px;
+  }
+  
+  /* Add Items */
+  .add_button {
+    font-size: var(--font-medium);
+    margin-bottom: 3px;
+    margin-left: 85%;
+  }
+  
+  .add_button:hover {
+    color: var(--color-yellow);
+    cursor: pointer;
+  }
+  
+  .add {
+    width: 90%;
+    font-size: var(--font-regular);
+    margin-bottom: 5px;
+  }
+  
+  .add_input {
+    font-family: 'Yeon Sung', cursive;
+    height: 30px;
+    width: 47%;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    border-left: none;
+    font-size: var(--font-regular);
+    outline: none;
+  }
+  
+  /* Item List */
+  
+  /*
+  .delete-checked-btn:hover {
+    cursor: pointer;
+    background-color: black;
+    color: var(--color-white);
+  }*/
+  
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 5px;
+    list-style-type: none;
+    overflow-y: auto;
+  }
+  
+  /*
+  stop this because of unknown error
+  .delete-checked-btn {
+    font-family: 'Yeon Sung', cursive;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: var(--size-border-radius);
+    background-color: transparent;
+    font-size: var(--font-regular);
+    margin-bottom: 5px;
+  }
+  */
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .item:hover {
+    cursor: pointer;
+  }
+  
+  .item.checked {
+    color: var(--color-dark-white);
+    text-decoration: line-through;
+  }
+  
+  .item_name {
+    width: 70%;
+  }
+  
+  .item_price {
+    width: 25%;
+    text-align: right;
+    padding-right: 10px;
+  }
+  
+  .item_delete-button {
+    width: 5%;
+  }
+  
+  .item_delete-button:hover {
+    color: var(--color-yellow);
+    cursor: pointer;
+  }
+  
+  /* Summary */
+  .horizontal-line {
+    width: 90%;
+    height: 2px;
+    margin: 10px 0;
+    background-color: black;
+  }
+  
+  .sum {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  
+  .sum_item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  /* Receipt Layout */
+  .receipt_bottom {
+    display: block;
+    margin: auto;
+    transform: rotate(180deg);
+    width: 500px;
+  }
+  
+  @media (max-width: 480px) {
+    :root {
+      --font-large: 40px;
+      --font-medium: 20px;
+      --font-regulear: 12px;
+    }
+    .receipt_top {
+      width: 80%;
+    }
+    .main {
+      width: 80%;
+    }
+    .receipt_bottom {
+      width: 80%;
+    }
+  
+    .add_button {
+      margin-left: 75%;
+    }
+  
+    .add_input {
+      height: 25px;
+      width: 40%;
+    }
+  
+    .item-list {
+      margin-top: 3px;
+    }
+  
+    item-list button {
+      margin-bottom: 3px;
+    }
+  }
